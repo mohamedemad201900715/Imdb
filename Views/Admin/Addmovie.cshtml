@@ -1,0 +1,31 @@
+﻿@model IList<imdb.Models.director>
+@{
+    ViewBag.Title = "Addmovie";
+}
+
+<br />
+<br />
+<br />
+<br />
+
+<form method="post" action="/Admin/Addmovie" enctype = "multipart/form-data" >
+    <label>Name</label><input type="text" name="name" />
+    <br />
+    <label>Photo</label><input type="file" name="photo"/>
+    <br />
+    <label>director</label>
+    
+    <select name="director">
+        @{
+            foreach (var item in Model)
+            {
+                <option value="@item.id">@item.name</option>
+            }
+        }
+    </select>
+    
+    <br />
+    <label>Description</label> <input type="text" name="description"/>
+    <br />
+    <input type="submit" value="send" />
+</form>

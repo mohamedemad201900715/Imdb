@@ -1,0 +1,21 @@
+﻿@model imdb.Controllers.acts_in_movie
+
+@{
+    ViewBag.Title = "one_movie";
+}
+
+<img src="@Model.movie1.photo_movie" height="150px" />
+<h2> @Model.movie1.name</h2>
+
+<form method="post" action="/Admin/one_movie/@Model.movie1.id">
+    <label> actors</label>
+    <select name="act">
+       @{foreach (var item in Model.actors)
+            {
+               <option value="@item.id"> @item.name </option>
+            }
+       }
+    </select>
+    <input type="submit" value="send" />
+</form>
+

@@ -1,0 +1,27 @@
+﻿@model IList<imdb.Models.actor>
+
+@{
+    ViewBag.Title = "AllActor";
+}
+<form method="post" action="/profile/addfavAcors">
+
+    <label>Actors</label>
+    <select name="mo">
+        @foreach (var item in Model)
+        {
+            <option value="@item.id">@item.name</option>
+        }
+    </select>
+    <br />
+    <input type="submit" value="Add to favourite" />
+</form>
+
+
+
+@{foreach (var item in Model)
+    {
+        <img src="@item.photo_act" height="150px" />
+        <h4>@item.name</h4>
+    }
+}
+

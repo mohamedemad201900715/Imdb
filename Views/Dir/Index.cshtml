@@ -1,0 +1,11 @@
+﻿@model IList<imdb.Models.director>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{ foreach (var item in Model){
+        <a href="/Dir/Dir_one/@item.id"> <img src="@item.photo_dir" height="150px" /></a>
+        <h3>@item.name</h3>
+    } }
+

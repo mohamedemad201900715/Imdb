@@ -1,0 +1,16 @@
+﻿@model imdb.Models.User
+@{
+    ViewBag.Title = "myfavDirs";
+}
+<h1> My favourite Director</h1>
+@{
+    foreach (var item in Model.Fav_Directors)
+    {
+        <img src="@item.Director.photo_dir" height="100px" />
+        <h5>@item.Director.name</h5>
+        <a href="/profile/DeleteFavdir/@item.id">
+            <h6> Delete</h6>
+        </a>
+    }
+}
+

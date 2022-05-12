@@ -1,0 +1,17 @@
+﻿@model imdb.Models.User
+@{
+    ViewBag.Title = "myfavMovies";
+}
+
+<h1> My favourite Movies</h1>
+@{
+    foreach (var item in Model.Fav_Movies)
+    {
+        <img src="@item.Movie.photo_movie" height="100px" />
+        <h5>@item.Movie.name</h5>
+        <a href="/profile/DeleteFavMovie/@item.id">
+            <h6> Delete</h6>
+        </a>
+            }
+            }
+

@@ -1,0 +1,18 @@
+﻿@model IList<imdb.Models.movie>
+
+@{
+    ViewBag.Title = "AllMovie";
+}
+
+<div>
+@{   
+    foreach(var item in Model){
+        <div class="col-sm-4" >
+           <a href="/admin/one_movie/@item.id" ><img src="@item.photo_movie" height="120px"/></a>
+            <h3>@item.name</h3>
+            <h4>@item.description</h4>
+            
+        </div>
+    }
+}
+</div>

@@ -1,0 +1,10 @@
+﻿@model imdb.Models.User
+@{
+    ViewBag.Title = "MyProfile";
+}
+
+<img src="@Model.Photo_user" height="170px" />
+<h3>@Model.FristName @Model.lastName</h3>
+
+<a href="/profile/Updateinfo">
+    <h2>Update information</h2></a>

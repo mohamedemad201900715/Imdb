@@ -1,0 +1,17 @@
+﻿@model imdb.Models.User
+@{
+    ViewBag.Title = "myfavActs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1> My favourite Actors</h1>
+@{
+    foreach (var item in Model.Fav_Actors)
+    {
+        <img src="@item.Actor.photo_act" height="100px" />
+        <h5>@item.Actor.name</h5>
+        <a href="/profile/DeleteFavactor/@item.id">
+            <h6> Delete</h6>
+        </a>
+    }
+}

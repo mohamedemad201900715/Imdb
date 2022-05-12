@@ -1,0 +1,29 @@
+﻿@model imdb.Models.User
+
+@{
+    ViewBag.Title = "Index";
+}
+       
+    <a href="/profile/MyProfile">
+       <h1> MyProfile </h1>
+    </a>
+
+    <a href="/profile/myfav">
+        <h1>my favourite</h1>
+    </a>
+    <h2>Search Movie</h2>
+    <form method="post" action="/profile/searsh">
+        <label>name movie</label>
+        <input type="text" name="nmovie" />
+        <input type="submit" value="Search" />
+    </form>
+    <a href="/profile/AllMovie">
+        <h1> Veiw All Movies</h1>
+    </a>
+    <a href="/profile/AllActor">
+        <h1> Veiw All Actors</h1>
+    </a>
+    <a href="/profile/Alldirectors">
+        <h1> Veiw All Directors</h1>
+    </a>
+
